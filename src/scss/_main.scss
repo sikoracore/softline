@@ -1,0 +1,368 @@
+// ========== section hero ========== //
+.hero {
+	background: url('../../../img/bg.jpg') no-repeat;
+	background-size: cover;
+	&__body {
+		padding: 158px 0;
+		font-family: $fontProximaNovaCon;
+		font-weight: 600;
+	}
+	&__title {
+		margin-bottom: 60px;
+		max-width: 700px;
+		font-size: 56px;
+		line-height: 100%;
+	}
+	&__btn {
+		padding: 18px 28px;
+		font-size: 18px;
+		line-height: 111%;
+		color: #fff;
+		background: $colorRed;
+		border-radius: 8px;
+		transition: background 0.9s ease ;
+		&:hover {
+			background: $colorRedHover;
+		}
+	}
+}
+// ================================== //
+
+// ========== section hero ========== //
+.about {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	&__description {
+		padding: 99px 110px;
+		margin-bottom: 100px;
+		font-family: $fontProximaNovaCon;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 120%;
+		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+		span {
+			color: $colorRed;
+		}
+	}
+
+	&__items {
+		max-width: 899px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 185px;
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__item {
+		font-family: $fontProximaNovaCon;
+		&-symbol {
+			font-size: 64px;
+			font-weight: 600;
+			color: $colorRed;
+			&:nth-child(1) {
+				font-weight: 900;
+			}
+		}
+
+		&-title {
+			margin-bottom: 4px;
+			font-size: 80px;
+			font-weight: 600;
+			line-height: 80%;
+			color: $colorRed;
+			span {
+				margin-right: 10px;
+			}
+		}
+
+		&-text {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 150%;
+		}
+	}
+}
+// ================================== //
+
+// ========== section offices ========== //
+.offices {
+	&__body {
+		padding: 28px 0px;
+		margin: 90px auto;
+		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		display: flex;
+		&-title {
+			margin-right: 12px;
+			font-family: $fontProximaNovaCon;
+			font-size: 24px;
+			font-weight: 600;
+		}
+		&-btn {
+			background: inherit;
+		}
+	}
+	&__right {
+		display: flex;
+		gap: 30px;
+	}
+	&__item {
+	}
+	&__link {
+		padding: 28px 0px;
+		font-family: $fontProximaNovaCon;
+		font-size: 18px;
+		font-weight: 600;
+		color: $colorGray;
+		border-bottom: 2px solid transparent ;
+		transition: all 0.5s ease;
+		&:hover {
+			color: $colorRedAlt;
+			border-bottom: 2px solid $colorRedAlt;
+		}
+	}
+	&__img {
+		margin-bottom: 100px;
+		img {
+			width: 100%;
+		}
+	}
+}
+// ================================== //
+
+// ========== section missoin ========== //
+.mission {
+	position: relative;
+	padding: 139px 0px 140px 0px;
+	background-color: $colorRedAlt2;
+	font-family: $fontProximaNovaCon;
+	text-align: center;
+	color: $colorWhite;
+	z-index: 100;
+	background: #a30c33;
+
+	&::before {
+		position: absolute;
+		content: url(../img/missionPartten.svg);
+		left: 0;
+		top: calc(50% - 188.5px);
+		z-index: -1;
+		opacity: 0.4;
+	}
+
+	&::after {
+		position: absolute;
+		content: url(../img/missionPartten.svg);
+		right: 0;
+		top: calc(50% - 188.5px);
+		transform: rotate(180deg);
+		z-index: -1;
+		opacity: 0.4;
+	}
+	&__body {
+		max-width: 1110px;
+	}
+	&__title {
+		margin-bottom: 40px;
+		font-size: 56px;
+		font-weight: 600;
+		line-height: 100%;
+	}
+	&__subtitle {
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+}
+// ================================== //
+
+// ========== section business ========== //
+.business {
+	padding: 100px 0px;
+	&__title {
+		margin-bottom: 55px;
+	}
+	&__column {
+		display: grid;
+		grid-template-columns: repeat(2, 615px);
+		grid-template-rows: repeat(3, 260px);
+		grid-column-gap: 22px;
+		grid-row-gap: 22px;
+	}
+	&__item {
+		position: relative;
+		&-img {
+			width: 100%;
+		}
+		&-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 28px 20px;
+			background-color: rgba($colorBlueDark, 0.6);
+			font-family: $fontProximaNovaCon;
+			font-size: 20px;
+			font-weight: 600;
+			color: $colorWhite;
+		}
+	}
+}
+// ================================== //
+
+// ========== section compensation ========== //
+.compensation {
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+	&__top {
+		position: relative;
+		padding: 80px 0px 70px 0px;
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: rgba($colorBlack, 0.1);
+		}
+	}
+	&__bottom {
+	}
+	&__title {
+		margin-bottom: 50px;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 17px;
+		padding: 0 76px;
+	}
+	&__item {
+		width: 178px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100px;
+		background-color: rgba($colorBlueDark, 0.05);
+		border-radius: 50%;
+	}
+	&__text {
+		margin-top: 10px;
+		font-family: $fontProximaNovaCon;
+		font-size: 18px;
+		font-weight: 400;
+		color: $colorGray;
+	}
+}
+// ================================== //
+
+// ========== section motivation ========== //
+.motivation {
+	padding: 70px 0px 80px 0px;
+	&__title {
+		width: 755px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		font-size: 40px;
+		span {
+			color: $colorRed;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 80px;
+	}
+	&__item {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100px;
+		background-color: rgba($colorBlueDark, 0.05);
+		border-radius: 50%;
+	}
+	&__text {
+		margin-top: 10px;
+		font-family: $fontProximaNovaCon;
+		font-size: 18px;
+		font-weight: 400;
+		color: $colorGray;
+	}
+}
+// ================================== //
+
+// ========== section corporate ========== //
+.corporate {
+	padding: 100px 0px 56px 0px;
+	&__info {
+		margin-bottom: 38px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+	}
+	&__buttons {
+		display: flex;
+		gap: 20px;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		&:nth-child(2) {
+			transform: rotate(180deg);
+		}
+		svg {
+			width: 10px;
+			height: 20px;
+		}
+	}
+	&__slider {
+		margin-bottom: 40px;
+		img {
+			width: 100%;
+		}
+	}
+	&__scroll {
+		display: flex;
+		gap: 10px;
+		&-btn {
+			width: 214px;
+			height: 6px;
+			background-color: rgba($colorBlack, 0.1);
+			&:nth-child(1) {
+				background: $colorRedAlt;
+			}
+		}
+	}
+}

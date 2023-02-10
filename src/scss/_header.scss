@@ -1,0 +1,29 @@
+// Header
+.header {
+	padding: 30px 0;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		height: 25px;
+	}
+	&__list {
+		display: flex;
+		gap: 20px;
+	}
+	&__item {
+	}
+	&__link {
+		font-family: $fontProximaNovaCon;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 111%;
+		color: $colorBlack;
+
+		&:hover {
+			border-bottom: 1px solid #444;
+		}
+	}
+}

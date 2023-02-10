@@ -104,6 +104,13 @@ h6 {
 .wrapper {
   max-width: 1250px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {
@@ -113,12 +120,48 @@ h6 {
   padding: 0 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #000000;
 }
 
 body.locked {
   overflow: hidden;
+}
+
+/*========= SCROLL UP ==========*/
+
+.scrollup {
+  position: fixed;
+  padding: 10px;
+  right: 20px;
+  bottom: -30%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #2D3653;
+  font-size: 20px;
+  z-index: 1;
+  color: red;
+  border: 1px solid #B01736;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.scrollup:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+/* Show Scroll Up */
+
+.show-scroll {
+  bottom: 20px;
 }
 
 @-webkit-keyframes fade {
@@ -147,6 +190,13 @@ body.locked {
   font-size: 56px;
   font-weight: 600;
   color: #444444;
+}
+
+.business-title {
+  font-family: "Proxima Nova Condensed";
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .header {
@@ -431,6 +481,15 @@ body.locked {
 
 .business__item {
   position: relative;
+  overflow: hidden;
+}
+
+.business__item:hover .business__item-text {
+  margin-left: -100%;
+}
+
+.business__item:hover .business__item-hover {
+  margin-left: 0;
 }
 
 .business__item-img {
@@ -443,11 +502,56 @@ body.locked {
   left: 0;
   width: 100%;
   padding: 28px 20px;
-  background-color: rgba(45, 54, 83, 0.6);
+  background: rgba(45, 54, 83, 0.6);
   font-family: "Proxima Nova Condensed";
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
+  float: left;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.business__item-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  float: left;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-left: -100%;
+  background: rgba(45, 54, 83, 0.6);
+}
+
+.business__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  float: left;
+  margin-left: -100%;
+}
+
+.business__hover-title {
+  padding: 28px 20px;
+}
+
+.business__hover-text {
+  padding: 0px 20px;
+  width: 522px;
+  font-family: "Proxima Nova Condensed";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #ffffff;
+}
+
+.business__hover:hover {
+  margin-left: 0;
 }
 
 .compensation {

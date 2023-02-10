@@ -20,7 +20,7 @@
 		color: #fff;
 		background: $colorRed;
 		border-radius: 8px;
-		transition: background 0.9s ease ;
+		transition: background 0.9s ease;
 		&:hover {
 			background: $colorRedHover;
 		}
@@ -127,7 +127,7 @@
 		font-size: 18px;
 		font-weight: 600;
 		color: $colorGray;
-		border-bottom: 2px solid transparent ;
+		border-bottom: 2px solid transparent;
 		transition: all 0.5s ease;
 		&:hover {
 			color: $colorRedAlt;
@@ -204,6 +204,15 @@
 	}
 	&__item {
 		position: relative;
+		overflow: hidden;
+		&:hover &-text {
+			margin-left: -100%;
+		}
+
+		&:hover &-hover {
+			margin-left: 0;
+		}
+
 		&-img {
 			width: 100%;
 		}
@@ -213,11 +222,50 @@
 			left: 0;
 			width: 100%;
 			padding: 28px 20px;
-			background-color: rgba($colorBlueDark, 0.6);
+			background: rgba($colorBlueDark, 0.6);
 			font-family: $fontProximaNovaCon;
 			font-size: 20px;
 			font-weight: 600;
 			color: $colorWhite;
+			float: left;
+			transition: all 0.2s ease-in-out;
+		}
+		&-hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			float: left;
+			transition: all 0.5s;
+			margin-left: -100%;
+			background: rgba($colorBlueDark, 0.6);
+		}
+	}
+	&__hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		float: left;
+		margin-left: -100%;
+
+		&-title {
+			padding: 28px 20px;
+		}
+
+		&-text {
+			padding: 0px 20px;
+			width: 522px;
+			font-family: $fontProximaNovaCon;
+
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 140%;
+			color: $colorWhite;
+		}
+		&:hover {
+			margin-left: 0;
 		}
 	}
 }

@@ -1,48 +1,75 @@
 // Container
 .wrapper {
-    max-width: 1250px;
-    margin: 0 auto;
+	max-width: 1250px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
+	max-width: ($containerWidth + $containerPadding) + px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 $containerSidePadding + px;
 
-    @media (max-width: $breakpoint1450) {
-        max-width: 1200px;
-    }
+	@media (max-width: $breakpoint1450) {
+		max-width: 1200px;
+	}
 
-    @media (max-width: $breakpoint992) {
-        max-width: 970px;
-    }
+	@media (max-width: $breakpoint992) {
+		max-width: 970px;
+	}
 
-    @media (max-width: $breakpoint768) {
-        max-width: 740px;
-    }
+	@media (max-width: $breakpoint768) {
+		max-width: 740px;
+	}
 
-    @media (max-width: $breakpoint480) {
-        max-width: none;
-    }
+	@media (max-width: $breakpoint480) {
+		max-width: none;
+	}
 }
-
+html {
+	// Плавный скролл
+	scroll-behavior: smooth;
+}
 // Body Locked
 body {
-    color: $colorBlack;
+	color: $colorBlack;
 
-    &.locked {
-        overflow: hidden;
-    }
+	&.locked {
+		overflow: hidden;
+	}
+}
+
+/*========= SCROLL UP ==========*/
+.scrollup {
+	position: fixed;
+	padding: 10px;
+	right: 20px;
+	bottom: -30%;
+	display: inline-flex;
+	background-color: $colorBlueDark;
+	font-size: 20px;
+	z-index: 1;
+	color: red;
+	border: 1px solid $colorRed;
+	transition: 0.3s;
+}
+.scrollup:hover {
+	transform: translateY(-5px);
+}
+/* Show Scroll Up */
+.show-scroll {
+	bottom: 20px;
 }
 
 // Animations
 // Fade
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }

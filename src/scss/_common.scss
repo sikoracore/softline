@@ -5,6 +5,12 @@
 	font-size: 56px;
 	font-weight: 600;
 	color: $colorGray;
+	@media (max-width: $mobile) {
+		font-size: 38px;
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: 28px;
+	}
 }
 
 .business-title {

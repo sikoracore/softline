@@ -1,5 +1,6 @@
 // ========== section hero ========== //
 .hero {
+	padding: 0 15px;
 	background: url('../../../img/bg.jpg') no-repeat;
 	background-size: cover;
 	&__body {
@@ -10,8 +11,10 @@
 	&__title {
 		margin-bottom: 60px;
 		max-width: 700px;
-		font-size: 56px;
-		line-height: 100%;
+		text-align: left;
+		@media (max-width: $mobile) {
+			font-size: 28px;
+		}
 	}
 	&__btn {
 		padding: 18px 28px;
@@ -30,8 +33,7 @@
 
 // ========== section hero ========== //
 .about {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin: 100px auto;
 	&__description {
 		padding: 99px 110px;
 		margin-bottom: 100px;
@@ -41,6 +43,13 @@
 		font-weight: 600;
 		line-height: 120%;
 		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+		@media (max-width: $mobile) {
+			margin: 60px 0px 50px 0px;
+		}
+		@media (max-width: $mobile) {
+			padding: 24px 5px;
+			font-size: 16px;
+		}
 		span {
 			color: $colorRed;
 		}
@@ -53,12 +62,22 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 185px;
+		text-align: left;
+		@media (max-width: $mobile) {
+			column-gap: 8px;
+			row-gap: 24px;
+			text-align: center;
+		}
 	}
 
 	&__body {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 10px;
+		@media (max-width: $mobile) {
+			gap: 4px;
+		}
 	}
 
 	&__item {
@@ -67,6 +86,10 @@
 			font-size: 64px;
 			font-weight: 600;
 			color: $colorRed;
+			@media (max-width: $mobile) {
+				font-size: 30px;
+			}
+
 			&:nth-child(1) {
 				font-weight: 900;
 			}
@@ -78,6 +101,9 @@
 			font-weight: 600;
 			line-height: 80%;
 			color: $colorRed;
+			@media (max-width: $mobile) {
+				font-size: 40px;
+			}
 			span {
 				margin-right: 10px;
 			}
@@ -87,6 +113,9 @@
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 150%;
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -94,19 +123,26 @@
 
 // ========== section offices ========== //
 .offices {
+	position: relative;
 	&__body {
 		padding: 28px 0px;
-		margin: 90px auto;
+		margin: 90px 0px 0px 0px;
 		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
 	}
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 	&__left {
 		display: flex;
+		gap: 38px;
 		&-title {
-			margin-right: 12px;
+			// margin-right: 12px;
 			font-family: $fontProximaNovaCon;
 			font-size: 24px;
 			font-weight: 600;
@@ -117,7 +153,13 @@
 	}
 	&__right {
 		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
 		gap: 30px;
+		@media (max-width: $tablet) {
+			display: none;
+			flex-direction: column;
+		}
 	}
 	&__item {
 	}
@@ -141,6 +183,62 @@
 		}
 	}
 }
+// acc//
+.accordion__item {
+	margin-bottom: 0.5rem;
+	border-radius: 0.25rem;
+}
+
+.accordion__header {
+	padding: 28px 0px;
+	font-family: $fontProximaNovaCon;
+	color: $colorGray;
+	font-weight: 600;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+
+	cursor: pointer;
+	transition: background-color 0.2s ease-out;
+}
+
+.accordion__header::after {
+	flex-shrink: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-left: auto;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-size: 1.25rem;
+	content: '';
+	transition: transform 0.2s ease-out;
+}
+
+.accordion__item_show .accordion__header::after,
+.accordion__item_slidedown .accordion__header::after {
+	transform: rotate(-180deg);
+}
+
+.accordion__header:hover {
+	// background-color: #0b5ed7;
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__header {
+	border-bottom-right-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+
+.accordion__content {
+	margin: 20px 0px 0px 0px;
+	padding: 30px 68.5px;
+	background: #fff;
+	border-bottom-right-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+	display: none;
+}
+// ================================== //
 // ================================== //
 
 // ========== section missoin ========== //
@@ -153,6 +251,9 @@
 	color: $colorWhite;
 	z-index: 100;
 	background: #a30c33;
+	@media (max-width: $mobile) {
+		padding: 32px 0;
+	}
 
 	&::before {
 		position: absolute;
@@ -161,6 +262,10 @@
 		top: calc(50% - 188.5px);
 		z-index: -1;
 		opacity: 0.4;
+		@media (max-width: $mobile) {
+			width: 142px;
+			height: 154px;
+		}
 	}
 
 	&::after {
@@ -171,6 +276,10 @@
 		transform: rotate(180deg);
 		z-index: -1;
 		opacity: 0.4;
+		@media (max-width: $mobile) {
+			width: 142px;
+			height: 154px;
+		}
 	}
 	&__body {
 		max-width: 1110px;
@@ -180,11 +289,17 @@
 		font-size: 56px;
 		font-weight: 600;
 		line-height: 100%;
+		@media (max-width: $mobile) {
+			font-size: 28px;
+		}
 	}
 	&__subtitle {
 		font-size: 32px;
 		font-weight: 400;
 		line-height: 150%;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
 	}
 }
 // ================================== //
@@ -192,19 +307,33 @@
 // ========== section business ========== //
 .business {
 	padding: 100px 0px;
+	@media (max-width: $mobile) {
+		padding: 50px 0px 74px 0px;
+	}
 	&__title {
 		margin-bottom: 55px;
+		@media (max-width: $mobile) {
+			margin-bottom: 15px;
+		}
 	}
 	&__column {
 		display: grid;
-		grid-template-columns: repeat(2, 615px);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 260px);
 		grid-column-gap: 22px;
 		grid-row-gap: 22px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+		}
 	}
 	&__item {
 		position: relative;
 		overflow: hidden;
+		width: 100%;
 		&:hover &-text {
 			margin-left: -100%;
 		}
@@ -240,6 +369,9 @@
 			transition: all 0.5s;
 			margin-left: -100%;
 			background: rgba($colorBlueDark, 0.6);
+			@media (max-width: $tablet) {
+				display: none;
+			}
 		}
 	}
 	&__hover {
@@ -277,6 +409,9 @@
 	&__top {
 		position: relative;
 		padding: 80px 0px 70px 0px;
+		@media (max-width: $mobile) {
+			padding: 24px 0;
+		}
 		&::after {
 			position: absolute;
 			content: '';
@@ -291,15 +426,22 @@
 	}
 	&__title {
 		margin-bottom: 50px;
+		@media (max-width: $mobile) {
+			margin-bottom: 40px;
+		}
 	}
 	&__list {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 17px;
 		padding: 0 76px;
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
 	}
 	&__item {
-		width: 178px;
+		flex: 15%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -313,6 +455,10 @@
 		height: 100px;
 		background-color: rgba($colorBlueDark, 0.05);
 		border-radius: 50%;
+		@media (max-width: $mobile) {
+			width: 80px;
+			height: 80px;
+		}
 	}
 	&__text {
 		margin-top: 10px;
@@ -320,6 +466,9 @@
 		font-size: 18px;
 		font-weight: 400;
 		color: $colorGray;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
 	}
 }
 // ================================== //
@@ -327,19 +476,37 @@
 // ========== section motivation ========== //
 .motivation {
 	padding: 70px 0px 80px 0px;
+	@media (max-width: $mobile) {
+		padding: 24px 0;
+	}
 	&__title {
-		width: 755px;
+		max-width: 755px;
 		margin: 0 auto;
 		margin-bottom: 50px;
+		font-family: $fontProximaNovaCon;
+		text-align: center;
+		font-weight: 600;
 		font-size: 40px;
+		line-height: 120%;
+		color: $colorGray;
+		@media (max-width: $mobile) {
+			margin-bottom: 25px;
+
+			font-size: 22px;
+		}
 		span {
+			display: block;
 			color: $colorRed;
 		}
 	}
 	&__list {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 80px;
+		@media (max-width: $mobile) {
+			gap: 25px;
+		}
 	}
 	&__item {
 		text-align: center;
@@ -355,6 +522,10 @@
 		height: 100px;
 		background-color: rgba($colorBlueDark, 0.05);
 		border-radius: 50%;
+		@media (max-width: $mobile) {
+			width: 80px;
+			height: 80px;
+		}
 	}
 	&__text {
 		margin-top: 10px;
@@ -362,6 +533,9 @@
 		font-size: 18px;
 		font-weight: 400;
 		color: $colorGray;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
 	}
 }
 // ================================== //
@@ -369,16 +543,30 @@
 // ========== section corporate ========== //
 .corporate {
 	padding: 100px 0px 56px 0px;
+	@media (max-width: $mobile) {
+		padding: 50px 0px 49px 0px;
+	}
 	&__info {
-		margin-bottom: 38px;
+		margin-bottom: 37px;
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 15px;
+		}
 	}
 	&__title {
+		padding: 0px 0px 13px 0px;
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
 	}
 	&__buttons {
+		align-self: flex-end;
 		display: flex;
 		gap: 20px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	&__btn {
 		display: flex;
@@ -387,6 +575,7 @@
 		width: 56px;
 		height: 56px;
 		border-radius: 50%;
+
 		&:nth-child(2) {
 			transform: rotate(180deg);
 		}
@@ -401,16 +590,48 @@
 			width: 100%;
 		}
 	}
-	&__scroll {
-		display: flex;
-		gap: 10px;
-		&-btn {
-			width: 214px;
-			height: 6px;
-			background-color: rgba($colorBlack, 0.1);
-			&:nth-child(1) {
-				background: $colorRedAlt;
-			}
-		}
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.pag {
+	margin-top: 40px;
+	@media (max-width: $mobileSmall) {
+		display: none;
 	}
+}
+.swiper-pagination {
+	margin: 100px 0 0 0;
+	display: flex;
+	width: 100%;
+	color: #aaa;
+}
+
+.swiper-pagination .box {
+	border-radius: 0;
+	background: transparent;
+	width: 214px; // height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.swiper-pagination-bullet {
+	// margin: 10px !important;
+	border-top: 6px solid;
+	border-top-color: #aaa;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+	border-top-color: $colorRedAlt;
 }

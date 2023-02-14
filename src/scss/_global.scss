@@ -11,19 +11,19 @@
 	margin: 0 auto;
 	padding: 0 $containerSidePadding + px;
 
-	@media (max-width: $breakpoint1450) {
+	@media (max-width: $pc) {
 		max-width: 1200px;
 	}
 
-	@media (max-width: $breakpoint992) {
+	@media (max-width: $tablet) {
 		max-width: 970px;
 	}
 
-	@media (max-width: $breakpoint768) {
+	@media (max-width: $mobile) {
 		max-width: 740px;
 	}
 
-	@media (max-width: $breakpoint480) {
+	@media (max-width: $mobileSmall) {
 		max-width: none;
 	}
 }
@@ -65,11 +65,10 @@ body {
 // Animations
 // Fade
 @keyframes fade {
-	0% {
-		opacity: 0;
+	from {
+		opacity: 0.4;
 	}
-
-	100% {
+	to {
 		opacity: 1;
 	}
 }

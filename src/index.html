@@ -5,7 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Index</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./css/style.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	</head>
 
 	<body class="main__body wrapper">
@@ -13,14 +18,17 @@
 		@@include('./html/_header.html')
 
 		<!-- Main Page -->
-		<main>@@include('./html/_main.html')</main>
+		<main>@@include('./html/_main.html') @@include('./html/_slider.html')</main>
 
 		<!-- Footer -->
 		@@include('./html/_footer.html')
 
 		<!--========== SCROLL UP ==========-->
 		<a href="#" class="scrollup" id="scroll-up"></a>
-	</body>
 
+	</body>
+	
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
+	<!-- <script src="./js/scripts.min.js"></script> -->
 </html>

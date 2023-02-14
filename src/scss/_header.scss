@@ -1,17 +1,34 @@
 // Header
 .header {
 	padding: 30px 0;
+	@media (max-width: $tablet) {
+		padding: 16px 0;
+	}
 	&__body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 	&__logo {
 		height: 25px;
+		margin-bottom: 0;
+		@media (max-width: $tablet) {
+			margin-bottom: 16px;
+		}
 	}
 	&__list {
 		display: flex;
-		gap: 20px;
+		flex-wrap: wrap;
+		align-items: center;
+		row-gap: 20px;
+		column-gap: 20px;
+		@media (max-width: $tablet) {
+			row-gap: 5px;
+			column-gap: 10px;
+		}
 	}
 	&__item {
 	}
@@ -21,6 +38,9 @@
 		font-weight: 600;
 		line-height: 111%;
 		color: $colorBlack;
+		@media (max-width: $mobileSmall) {
+			font-size: 14px;
+		}
 
 		&:hover {
 			border-bottom: 1px solid #444;

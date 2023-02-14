@@ -1,12 +1,12 @@
 // Container & Breakpoints
 @use 'sass:math';
 $containerWidth: 1110;
-$containerPadding: 20;
+$containerPadding: 30;
 $containerSidePadding: math.div($containerPadding, 2);
-$breakpoint1450: 1449.98 + px;
-$breakpoint992: 991.98 + px;
-$breakpoint768: 767.98 + px;
-$breakpoint480: 479.98 + px;
+$pc: 1449.98 + px;
+$tablet: 991.98 + px;
+$mobile: 767.98 + px;
+$mobileSmall: 479.98 + px;
 
 // Burger Menu
 // $burgerBreakpoint: $breakpoint992;

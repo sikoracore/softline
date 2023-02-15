@@ -600,7 +600,7 @@ body.locked {
 
 .business__small .accordion::before {
   position: absolute;
-  content: url(/img/arrow.svg);
+  content: url(./img/arrow.svg);
   right: 10px;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -642,7 +642,7 @@ body.locked {
 
 .business__small .active::before {
   position: absolute;
-  content: url(/img/arrow.svg);
+  content: url(./img/arrow.svg);
   right: 10px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);

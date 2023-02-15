@@ -5,7 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Index</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./css/style.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	</head>
 
 	<body class="main__body wrapper">
@@ -71,7 +76,7 @@
 		<main><!-- section hero -->
 <section class="hero">
 	<div class="hero__body container">
-		<h1 class="hero__title">
+		<h1 class="hero__title title">
 			Поставщик услуг цифровой трансформации и кибербезопасности
 		</h1>
 		<button class="hero__btn">На сайт</button>
@@ -124,62 +129,137 @@
 <!-- ========== -->
 
 <!-- section offices -->
-<section class="offices">
-	<div class="offices__body">
-		<div class="offices__header container">
-			<div class="offices__left">
-				<div class="offices__left-title">Офисы Softline</div>
-				<button class="offices__left-btn">
-					<svg
-						width="22"
-						height="12"
-						viewBox="0 0 22 12"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M21 1.98169L11 10.0028L1 1.98169"
-							stroke="#444444"
-							stroke-width="3"
-						/>
-					</svg>
-				</button>
+<section id="accordion" class="accordion">
+	<div class="accordion__item">
+		<div class="accordion__header offices__left-title">
+			<div class="offices__header container">
+				<div class="offices__left">
+					<div class="">Офисы Softline</div>
+					<button class="offices__left-btn">
+						<svg
+							width="22"
+							height="12"
+							viewBox="0 0 22 12"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M21 1.98169L11 10.0028L1 1.98169"
+								stroke="#444444"
+								stroke-width="3"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div class="right">
+					<ul class="offices__right">
+						<li class="offices__item">
+							<a href="" class="offices__link">Все</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Москва</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Центр</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Северо-Запад</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Юг</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Волга</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Урал</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Сибирь</a>
+						</li>
+						<li class="offices__item">
+							<a href="" class="offices__link">Дальний восток</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<ul class="offices__right">
-				<li class="offices__item">
-					<a href="" class="offices__link">Все</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Москва</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Центр</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Северо-Запад</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Юг</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Волга</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Урал</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Сибирь</a>
-				</li>
-				<li class="offices__item">
-					<a href="" class="offices__link">Дальний восток</a>
-				</li>
-			</ul>
+		</div>
+		<div class="accordion__body">
+			<div class="accordion__content">
+				<ul class="offices__right">
+					<li class="offices__item">
+						<a href="" class="offices__link">Москва</a>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Центр</a>
+						<ul>
+							<li>Воронеж</li>
+							<li>Ярославль</li>
+							<li>Белгород</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Северо-Запад</a>
+						<ul>
+							<li>Санкт-Петербург</li>
+							<li>Калининград</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Юг</a>
+						<ul>
+							<li>Ростов-на-Дону</li>
+							<li>Краснодар</li>
+							<li>Волгоград</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Волга</a>
+						<ul>
+							<li>Казань</li>
+							<li>Самара</li>
+							<li>Уфа</li>
+							<li>Оренбург</li>
+							<li>Нижний Новгород</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Урал</a>
+						<ul>
+							<li>Екатеринбург</li>
+							<li>Челябинск</li>
+							<li>Пермь</li>
+							<li>Сургут</li>
+							<li>Тюмень</li>
+							<li>Ижевск</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Сибирь</a>
+						<ul>
+							<li>Новосибирск</li>
+							<li>Омск</li>
+							<li>Томск</li>
+							<li>Красноярск</li>
+							<li>Иркутск</li>
+						</ul>
+					</li>
+					<li class="offices__item">
+						<a href="" class="offices__link">Дальний восток</a>
+						<ul>
+							<li>Хабаровск</li>
+							<li>Владивосток</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="offices__img">
 		<img src="./img/map.png" alt="map" />
 	</div>
 </section>
+<!-- ----------- -->
 <!-- ========== -->
 
 <!-- section offices -->
@@ -296,6 +376,96 @@
 					сервисное партнерство с 30+ мировыми производителями.
 				</p>
 			</div>
+		</div>
+	</div>
+	<div class="business__small">
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Решения Softline</p>
+			</div>
+			<img class="accordion__img" src="/img/small1.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				ГК Softline предлагает клиентам собственную линейку оборудования (ПК,
+				серверы, торговое оборудование и проч.), разработку программных
+				продуктов, облачных решений, решений в области информационной
+				безопасности.
+			</p>
+			<img src="./img/big1.png" alt="" />
+		</div>
+
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Кибербезопасность</p>
+			</div>
+			<img class="accordion__img" src="/img/small2.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				Softline обладает всеми необходимыми государственными лицензиями для
+				организации проектов по информационной безопасности и аттестации.
+			</p>
+			<img src="./img/big2.png" alt="" />
+		</div>
+
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Импортозамещение</p>
+			</div>
+			<img class="accordion__img" src="/img/small3.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				ГК Softline обладает широчайшим портфелем решений и услуг для
+				импортозамещения, включая ПО и оборудование собственного производства.
+			</p>
+			<img src="./img/big3.png" alt="" />
+		</div>
+
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Облачные решения</p>
+			</div>
+			<img class="accordion__img" src="/img/small4.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				Softline использует современные облачные решения как российских, так и
+				международных вендоров для масштабирования бизнеса своих клиентов.
+				Подписки, услуги, трансформация.
+			</p>
+			<img src="./img/big4.png" alt="" />
+		</div>
+
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Цифровая трансформация и разработка ПО</p>
+			</div>
+			<img class="accordion__img" src="/img/small5.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				Softline использует современные технологи и новые возможности для
+				увеличения производительности бизнеса заказчика. В штате ГК Softline -
+				2000+ разработчиков, которые трансформируют ПО под нужды конкретного
+				предприятия.
+			</p>
+			<img src="./img/big5.png" alt="" />
+		</div>
+
+		<div class="accordion">
+			<div class="accordion__button">
+				<p>Техническая поддержка Softline</p>
+			</div>
+			<img class="accordion__img" src="/img/small6.png" alt="" />
+		</div>
+		<div class="panel">
+			<p>
+				200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году,
+				сервисное партнерство с 30+ мировыми производителями.
+			</p>
+			<img src="./img/big6.png" alt="" />
 		</div>
 	</div>
 </section>
@@ -540,7 +710,7 @@
 	</div>
 
 	<div class="compensation__bottom motivation">
-		<h2 class="motivation__title title">
+		<h2 class="motivation__title">
 			Программа дополнительной мотивации <span>доплата 12% от суммы</span>
 		</h2>
 		<ul class="motivation__list">
@@ -648,13 +818,15 @@
 </section>
 <!-- ========== -->
 
-<!-- section motivation -->
-<section class="corporate container">
+<!-- section corporate -->
+
+<!-- ========== -->
+ <section class="corporate">
 	<div class="container">
 		<div class="corporate__info">
 			<h1 class="corporate__title title">Корпоративная жизнь</h1>
 			<div class="corporate__buttons">
-				<button class="corporate__btn">
+				<button class="corporate__btn btn-prev" type="button">
 					<svg
 						width="13"
 						height="22"
@@ -665,7 +837,7 @@
 						<path d="M12 1L2 11L12 21" stroke="#A30C33" stroke-width="2" />
 					</svg>
 				</button>
-				<button class="corporate__btn">
+				<button class="corporate__btn btn-next" type="button">
 					<svg
 						width="13"
 						height="22"
@@ -678,23 +850,130 @@
 				</button>
 			</div>
 		</div>
-		<div class="corporate__slider">
-			<img
-				class="corporate__slider-img"
-				src="./img/corporateSlide-01.jpg"
-				alt="slide"
-			/>
+
+		<div class="corporate__carousel">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="corporate__card">
+							<picture>
+								<source media="(max-width: 319px)" srcset="./img/corporateSlide-01-small.jpg">
+								<source media="(min-width: 320px)" srcset="./img/corporateSlide-01-big.jpg">
+								<img
+									class="corporate__slider-img"
+									src="./img/corporateSlide-01-big.jpg"
+									alt="slide"
+								/>
+							</picture>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="corporate__card">
+							<picture>
+								<source media="(max-width: 319px)" srcset="./img/corporateSlide-02-small.jpg">
+								<source media="(min-width: 320px)" srcset="./img/corporateSlide-02-big.jpg">
+								<img
+									class="corporate__slider-img"
+									src="./img/corporateSlide-02-big.jpg"
+									alt="slide"
+								/>
+							</picture>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="corporate__card">
+							<picture>
+								<source media="(max-width: 319px)" srcset="./img/corporateSlide-03-small.jpg">
+								<source media="(min-width: 320px)" srcset="./img/corporateSlide-03-big.jpg">
+								<img
+									class="corporate__slider-img"
+									src="./img/corporateSlide-03-big.jpg"
+									alt="slide"
+								/>
+							</picture>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="corporate__card">
+							<picture>
+								<source media="(max-width: 319px)" srcset="./img/corporateSlide-04-small.jpg">
+								<source media="(min-width: 320px)" srcset="./img/corporateSlide-04-big.jpg">
+								<img
+									class="corporate__slider-img"
+									src="./img/corporateSlide-04-big.jpg"
+									alt="slide"
+								/>
+							</picture>
+
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="corporate__card">
+							<picture>
+								<source media="(max-width: 319px)" srcset="./img/corporateSlide-05-small.jpg">
+								<source media="(min-width: 320px)" srcset="./img/corporateSlide-05-big.jpg">
+								<img
+									class="corporate__slider-img"
+									src="./img/corporateSlide-05-big.jpg"
+									alt="slide"
+								/>
+							</picture>
+
+						</div>
+					</div>
+				</div>
+				<div class="pag">
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
 		</div>
-		<div class="corporate__scroll">
+
+		<!-- <div class="corporate__slider">
+			<div class="corporate__slider-body">
+				<img
+					class="corporate__slider-img"
+					src="./img/corporateSlide-01.jpg"
+					alt="slide"
+				/>
+			</div>
+			<div class="corporate__slider-body">
+				<img
+					class="corporate__slider-img"
+					src="./img/corporateSlide-02.jpg"
+					alt="slide"
+				/>
+			</div>
+			<div class="corporate__slider-body">
+				<img
+					class="corporate__slider-img"
+					src="./img/corporateSlide-03.jpg"
+					alt="slide"
+				/>
+			</div>
+			<div class="corporate__slider-body">
+				<img
+					class="corporate__slider-img"
+					src="./img/corporateSlide-04.jpg"
+					alt="slide"
+				/>
+			</div>
+			<div class="corporate__slider-body">
+				<img
+					class="corporate__slider-img"
+					src="./img/corporateSlide-05.jpg"
+					alt="slide"
+				/>
+			</div>
+		</div> -->
+		<!-- <div class="corporate__scroll">
 			<div class="corporate__scroll-btn"></div>
 			<div class="corporate__scroll-btn"></div>
 			<div class="corporate__scroll-btn"></div>
 			<div class="corporate__scroll-btn"></div>
 			<div class="corporate__scroll-btn"></div>
-		</div>
+		</div> -->
 	</div>
 </section>
-<!-- ========== -->
 </main>
 
 		<!-- Footer -->
@@ -704,7 +983,10 @@
 
 		<!--========== SCROLL UP ==========-->
 		<a href="#" class="scrollup" id="scroll-up"></a>
-	</body>
 
+	</body>
+	
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./js/scripts.min.js"></script>
+	<!-- <script src="./js/scripts.min.js"></script> -->
 </html>

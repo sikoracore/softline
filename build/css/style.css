@@ -570,6 +570,134 @@ body.locked {
   grid-row-gap: 22px;
 }
 
+.business__small {
+  display: none;
+  width: 300px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  /* Style the accordion panel. Note: hidden by default */
+}
+
+.business__small .accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.business__small .accordion::before {
+  position: absolute;
+  content: url(/img/arrow.svg);
+  right: 10px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.business__small .accordion::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(45, 54, 83, 0.6);
+  z-index: -1;
+}
+
+.business__small .accordion__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.business__small .accordion__img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.business__small .active::before {
+  position: absolute;
+  content: url(/img/arrow.svg);
+  right: 10px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.business__small .active:focus:before {
+  position: absolute;
+  content: url(/img/arrow.svg);
+  right: 10px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.business__small .panel {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  margin: -70px 0px 10px 0px;
+  padding: 70px 0px 55px 0px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  z-index: 8;
+}
+
+.business__small .panel p {
+  padding: 0px 10px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.business__small .panel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.business__small .panel::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 54, 83, 0.6);
+  z-index: -1;
+}
+
 .business__item {
   position: relative;
   overflow: hidden;
@@ -1110,6 +1238,14 @@ body.locked {
 
   .header__link {
     font-size: 14px;
+  }
+
+  .business__column {
+    display: none;
+  }
+
+  .business__small {
+    display: block;
   }
 
   .corporate__info {

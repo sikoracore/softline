@@ -329,6 +329,122 @@
 			grid-column-gap: 0px;
 			grid-row-gap: 0px;
 		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__small {
+		display: none;
+		width: 300px;
+		padding: 0px 10px;
+		margin: 0 auto;
+		@media (max-width: $mobileSmall) {
+			display: block;
+		}
+		.accordion {
+			display: flex;
+			position: relative;
+			padding: 20px 10px;
+			margin-bottom: 10px;
+			width: 100%;
+			height: 60px;
+			font-size: 20px;
+			color: #fff;
+			text-align: left;
+			outline: none;
+			transition: 0.4s;
+			cursor: pointer;
+			z-index: 10;
+
+			&::before {
+				position: absolute;
+				content: url(/img/arrow.svg);
+				right: 10px;
+				transform: rotate(0deg);
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(#2d3653, 0.6);
+				z-index: -1;
+			}
+
+			&__button {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				p {
+				}
+			}
+
+			&__img {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+
+		.active {
+			&::before {
+				position: absolute;
+				content: url(/img/arrow.svg);
+				right: 10px;
+				transform: rotate(180deg);
+			}
+			&:focus:before {
+				position: absolute;
+				content: url(/img/arrow.svg);
+				right: 10px;
+				transform: rotate(180deg);
+			}
+		}
+		/* Style the accordion panel. Note: hidden by default */
+		.panel {
+			position: relative;
+			display: none;
+			overflow: hidden;
+			margin: -70px 0px 10px 0px;
+			padding: 70px 0px 55px 0px;
+			color: #fff;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			z-index: 8;
+
+			p {
+				padding: 0px 10px;
+				font-size: 16px;
+				z-index: 10;
+			}
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: -1;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(#2d3653, 0.6);
+				z-index: -1;
+			}
+		}
 	}
 	&__item {
 		position: relative;
